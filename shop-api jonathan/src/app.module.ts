@@ -1,14 +1,15 @@
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ProductModule } from './products/products.module';
-import {ConfigModule} from '@nestjs/config';
-import {Module} from '@nestjs/common'
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
+      //configuraciones para la base de datos
       type: 'postgres',
       host: process.env.DB_HOST,
       port: +process.env.DB_PORT,
@@ -18,7 +19,7 @@ import {Module} from '@nestjs/common'
       autoLoadEntities: true,
       synchronize: true,
     }),
-    ProductModule, 
+    ProductsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
