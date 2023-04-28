@@ -9,22 +9,19 @@ nombre: string;
 
 @IsString()
 @IsNotEmpty()
-modelo: string;
+marca: string;
 
 @IsString()
-color: string;
-
-@IsString()
-capasidad: string;
+cantidad: string;
 
 @IsNumber()
 precio: number;
 
-@IsNumber()
-año: number;
+// @IsNumber()
+// tipo: number;
 
-@IsString({ each: true })
-@IsArray()
-@IsOptional()
-images?: string[];
+// @IsString({ each: true })
+// @IsArray()
+// @IsOptional()
+// images?: string[];
 }

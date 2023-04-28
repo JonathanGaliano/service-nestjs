@@ -11,23 +11,20 @@ id: string;
 nombre: string;
 
 @Column({ type: 'text' })
-modelo: string;
+marca: string;
 
 @Column({ type: 'text' })
-color: string;
-
-@Column({ type: 'text' })
-capasidad: string;
+cantidad: string;
 
 @Column({ type: 'numeric' })
 precio: number;
 
-@Column({ type: 'numeric' })
-año: number;
+// @Column({ type: 'numeric' })
+// tipo: number;
   //Relacion de uno a muchos
   //Un producto puede tener muchas imagenes
-@OneToMany(() => ProductImage, (productImage) => productImage.product, {
-    cascade: true,
-})
-images?: ProductImage[];
+// @OneToMany(() => ProductImage, (productImage) => productImage.product, {
+//     cascade: true,
+// })
+// images?: ProductImage[];
 }

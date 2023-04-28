@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, ParseUUIDPipe, Patch, Post,} from
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/products.dto';
 
-@Controller('productos')
+@Controller('product')
 export class ProductsController {
 constructor(private readonly productServiceRepo: ProductsService) {}
 
